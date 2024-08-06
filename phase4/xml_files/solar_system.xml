@@ -1,0 +1,306 @@
+<world>
+    <window width="512" height="512" />
+    <camera>
+        <position x="124" y="0" z="100" />
+        <lookAt x="0" y="0" z="0" />
+        <up x="0" y="1" z="0" />
+        <projection fov="60" near="1" far="1000" />
+    </camera>
+    <lights>
+        <light type="point" posX="0" posY="0" posZ="0" />
+        <!-- <light type="spot" posX="0" posY="25" posZ="0" dirX="0" dirY="-1" dirZ="0" cutoff="100"/>
+        <light type="spot" posX="0" posY="-25" posZ="0" dirX="0" dirY="1" dirZ="0" cutoff="100"/>
+        <light type="spot" posX="25" posY="0" posZ="0" dirX="-1" dirY="0" dirZ="0" cutoff="100"/>
+        <light type="spot" posX="-25" posY="0" posZ="0" dirX="1" dirY="0" dirZ="0" cutoff="100"/>
+        <light type="spot" posX="0" posY="0" posZ="25" dirX="0" dirY="0" dirZ="-1" cutoff="100"/>
+        <light type="spot" posX="0" posY="0" posZ="-25" dirX="0" dirY="0" dirZ="1" cutoff="100"/>         -->
+    </lights>
+    <group>
+        <!-- COMET -->
+        <group>
+            <transform>
+                <translate time="20" align="True"> 
+                        <point x="200" y="0" z="0" />
+                        <point x="0" y="0" z="-50"/>
+                        <point x="-200" y="0" z="0"/> 
+                        <point x="0" y="0" z="50"/> 
+                </translate>
+                <scale x="1" y="1" z="1"/>
+            </transform>
+            <models>
+                <model file="../3d_files/bezier_10.3d" >
+                    <texture file="comet.png" />
+                </model>
+            </models>
+        </group>
+        <!-- SOL -->
+        <group>
+            <transform>
+                <translate x="0" y="0" z="0" />
+                <scale x="0.8" y="0.8" z="0.8" />
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d">
+                    <texture file ="sun.jpg" />
+                    <color>
+						<diffuse R="255" G="196" B="0" />
+						<ambient R="255" G="196" B="0" />
+						<specular R="255" G="255" B="255" />
+						<emissive R="0" G="0" B="0" />
+						<shininess value="128" />
+					</color>
+                </model>
+            </models>
+        </group>
+
+        <!-- MERCÚRIO -->
+        <group>
+            <transform>
+                <translate time="1.204211" align="True"> 
+                        <point x="20.984" y="0" z="0" />
+                        <point x="0" y="0" z="-20.984"/>
+                        <point x="-20.984" y="0" z="0"/> 
+                        <point x="0" y="0" z="20.984"/> 
+                    </translate>
+                <scale x="0.017525" y="0.017525" z="0.017525"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="mercury.jpg" />
+                </model>
+            </models>
+        </group>
+
+        <!-- VÉNUS -->
+        <group>
+            <transform>
+                <translate time="3.075891146" align="True"> 
+                        <point x="28.6552" y="0" z="0" />
+                        <point x="0" y="0" z="-28.6552"/>
+                        <point x="-28.6552" y="0" z="0"/> 
+                        <point x="0" y="0" z="28.6552"/> 
+                    </translate>
+                <scale x="0.043465" y="0.043465" z="0.043465"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="venus.jpg" />
+                </model>
+            </models>
+        </group>
+
+        <!-- TERRA -->
+        <group>
+            <transform>
+                <translate time="5" align="True"> 
+                        <point x="35.8" y="0" z="0" />
+                        <point x="0" y="0" z="-35.8"/>
+                        <point x="-35.8" y="0" z="0"/> 
+                        <point x="0" y="0" z="35.8"/> 
+                    </translate>
+                <scale x="0.04576" y="0.04576" z="0.04576"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d" >
+                    <texture file="earth.jpg" />
+                </model>
+            </models>
+
+            <!-- LUA -->
+            <group>
+                <transform>
+                    <rotate time="2" x="0" y="1" z="0"/>
+                    <translate x="54.76" y="0" z="0" />
+                    <scale x="0.272727273" y="0.272727273" z="0.272727273"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="moon.jpg" />
+                    </model>
+                </models>
+            </group>
+        </group>
+
+        <!-- MARTE -->
+        <group>
+            <transform>
+                <translate time="9.4" align="True"> 
+                        <point x="49.288" y="0" z="0" />
+                        <point x="0" y="0" z="-49.288"/>
+                        <point x="-49.288" y="0" z="0"/> 
+                        <point x="0" y="0" z="49.288"/> 
+                </translate>
+
+                <scale x="0.02435" y="0.02435" z="0.02435"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="mars.jpg" />
+                </model>
+            </models>
+        </group>
+
+        <!-- JÚPITER -->
+        <group>
+            <transform>
+                <translate time="59.3" align="True"> 
+                        <point x="67.232" y="0" z="0" />
+                        <point x="0" y="0" z="-67.232"/>
+                        <point x="-67.232" y="0" z="0"/> 
+                        <point x="0" y="0" z="67.232"/> 
+                </translate>
+                <scale x="0.502" y="0.502" z="0.502"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="jupiter.jpg" />
+                </model>
+            </models>
+            <!-- IO -->
+            <group>
+                <transform>
+                    <rotate time="2" x="1" y="1" z="1"/>
+                    <translate x="23.64063745" y="0" z="0" />
+                    <scale x="0.026065737" y="0.026065737" z="0.026065737"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+            <!-- EUROPA -->
+            <group>
+                <transform>
+                    <rotate time="5" x="0" y="1" z="0"/>
+                    <translate x="25.82191235" y="0" z="0" />
+                    <scale x="0.022450199" y="0.022450199" z="0.022450199"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+            <!-- GANYMEDE -->
+            <group>
+                <transform>
+                    <rotate time="2" x="0" y="1" z="1"/>
+                    <translate x="29.775298805" y="0" z="0" />
+                    <scale x="0.037689243" y="0.037689243" z="0.037689243"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+            <!-- CALISTO -->
+            <group>
+                <transform>
+                    <rotate time="2" x="0" y="1" z="0"/>
+                    <translate x="36.152629482" y="0" z="0" />
+                    <scale x="0.034492032" y="0.034492032" z="0.034492032"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+        </group>
+
+        <!-- SATURNO -->
+        <group>
+            <transform>
+                <translate time="147.3" align="True"> 
+                    <point x="123.96" y="0" z="0" />
+                    <point x="0" y="0" z="-123.96"/>
+                    <point x="-123.96" y="0" z="0"/> 
+                    <point x="0" y="0" z="123.96"/> 
+                </translate>
+                <scale x="0.41845" y="0.41845" z="0.41845"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="saturn.jpg" />
+                </model>
+            </models>
+            <!-- RINGS -->
+            <group>
+                <transform>
+                    <scale x="1" y="0.000024" z="1"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/torus.3d"> 
+                    <texture file="ring.png" />
+                </model>
+                </models>
+            </group>
+            <!-- TITAN -->
+            <group>
+                <transform>
+                    <rotate time="2" x="0" y="1" z="0"/>
+                    <translate x="42.575767714" y="0" z="0" /> 
+                    <scale x="0.044222727" y="0.044222727" z="0.044222727"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+        </group>
+
+        <!-- URANO -->
+        <group>
+            <transform>
+                <translate time="420.05" align="True"> 
+                        <point x="248.04" y="0" z="0" />
+                        <point x="0" y="0" z="-248.04"/>
+                        <point x="-248.04" y="0" z="0"/> 
+                        <point x="0" y="0" z="248.04"/> 
+                </translate>
+                <scale x="0.1822" y="0.1822" z="0.1822"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="uranus.jpg" />
+                </model>
+            </models>
+        </group>
+
+        <!-- NEPTUNO -->
+        <group>
+            <transform>
+                <translate time="823.95" align="True"> 
+                        <point x="388.2" y="0" z="0" />
+                        <point x="0" y="0" z="-388.2"/>
+                        <point x="-388.2" y="0" z="0"/> 
+                        <point x="0" y="0" z="388.2"/> 
+                </translate>
+                <scale x="0.1769" y="0.1769" z="0.1769"/>
+            </transform>
+            <models>
+                <model file="../3d_files/sphere.3d"> 
+                    <texture file="neptune.jpg" />
+                </model>
+            </models>
+            <!-- TRITON -->
+            <group>
+                <transform>
+                    <rotate time="2" x="0" y="1" z="0"/>
+                    <translate x="39.291124929" y="0" z="0" />
+                    <scale x="0.054974562" y="0.054974562" z="0.054974562"/>
+                </transform>
+                <models>
+                    <model file="../3d_files/sphere.3d" >
+                        <texture file="comet.png" />
+                    </model>
+                </models>
+            </group>
+        </group>
+
+    </group>
+            
+</world>

@@ -1,0 +1,10 @@
+build/
+build/*
+3d_files/*
+!3d_files/sphere.3d
+!3d_files/torus.3d
+!3d_files/bezier_10.3d
+xml_files/*
+!xml_files/solar_system.xml
+!xml_files/teapot.patch
+.vscode

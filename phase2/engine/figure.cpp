@@ -1,0 +1,65 @@
+#include "figure.h"
+
+using namespace std;
+
+    Figure::Figure(){
+        pontos = vector<Ponto>();
+        transforms = vector<Transform>();
+        modelFiles = vector<string>();
+        figuras = vector<Figure>();
+    }
+
+    Figure::Figure(vector<Ponto> a, vector<Transform> t, vector<string> b, vector<Figure> c){
+        pontos = a;
+        transforms = t;
+        modelFiles = b;
+        figuras = c;
+    }
+
+    void Figure::printFigure(int tabs, int tabsout){
+        stringstream ss;
+        for(int i = 0; i < tabs; i++){
+            ss << "\t";
+        }
+        stringstream sso;
+        for(int i = 0; i < tabsout; i++){
+            sso << "\t";
+        }
+        printf("%s", sso.str().c_str());
+        printf("Figure:\n");
+
+        printf("%s", sso.str().c_str());
+        printf("\tPoints:\n");
+            printf("\t");
+            printf("%s", ss.str().c_str());
+            printf("Number of Points: %d\n", (int)pontos.size());
+        
+        printf("%s", sso.str().c_str());
+        printf("\tTransforms:\n");
+        for(Transform s : transforms){
+            printf("\t");
+            printf("%s", ss.str().c_str());
+            printf("%s ", s.type.c_str());
+            for(float n : s.arguments){
+                printf("%lf ", n);
+            }
+            printf("\n");
+        }
+
+        printf("%s", sso.str().c_str());
+        printf("\tModel Files:\n");
+        for(string s : modelFiles){
+            printf("\t");
+            printf("%s", ss.str().c_str());
+            printf("%s\n", s.c_str());
+        }
+        
+        printf("%s", sso.str().c_str());
+        tabsout++;
+        tabs++;
+        for(Figure f : figuras){
+            printf("\t\n");
+            //printf("\t");
+            f.printFigure(tabs, tabsout);
+        }
+    }
